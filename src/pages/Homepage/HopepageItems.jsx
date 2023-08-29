@@ -1,16 +1,13 @@
 import camel1 from "../../assets/camel1.jpeg";
 import camel2 from "../../assets/camel2.jpeg";
 import camel3 from "../../assets/camel3.jpeg";
-import camel4 from "../../assets/camel4.jpeg";
-import camel5 from "../../assets/camel5.jpeg";
-import camel6 from "../../assets/camel6.jpeg";
+
 import { useState } from "react";
 
 const items = [
   {
     id: `111111`,
     pic1: camel1,
-    pic2: camel4,
     title: `Camel Abdul`,
     price: 150,
     description: `Brand new camel! Only 2 left in stock`,
@@ -18,7 +15,6 @@ const items = [
   {
     id: `222222`,
     pic1: camel2,
-    pic2: camel5,
     title: `Camel Mahmoud`,
     price: 20,
     description: `This camel is dying so here comes the huge discount!`,
@@ -26,7 +22,6 @@ const items = [
   {
     id: `333333`,
     pic1: camel3,
-    pic2: camel6,
     title: `Six Pack`,
     price: 600,
     description: `By 5 get 1 free!`,
