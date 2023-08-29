@@ -12,7 +12,7 @@ function ContactUs() {
           <div className="flex justify-center">
             <img src={logo} className="w-16 h-16 transform -translate-y-1/2" />
           </div>
-          <div className="pl-8 flex  justify-between">
+          <div className="px-8 flex  justify-between">
             <div className="flex gap-2">
               <Icon icon={"skill-icons:instagram"} width={25} height={25} />
               <h1 className="font-thin"> @amfora </h1>
