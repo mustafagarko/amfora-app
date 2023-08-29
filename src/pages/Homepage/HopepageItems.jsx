@@ -24,7 +24,7 @@ const items = [
     pic1: camel3,
     title: `Six Pack`,
     price: 600,
-    description: `By 5 get 1 free!`,
+    description: `Buy 5 get 1 free!`,
   },
 ];
 
