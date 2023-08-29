@@ -1,4 +1,5 @@
 import desert from "../../assets/desert.jpeg";
+import Footer from "../../components/Footer";
 import HomepageItems from "./HopepageItems";
 function Homepage() {
   return (
@@ -17,6 +18,7 @@ function Homepage() {
         </figure>
       </div>
       <HomepageItems />
+      <Footer />
     </div>
   );
 }
