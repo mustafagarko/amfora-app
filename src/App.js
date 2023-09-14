@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import ItemPage from "./pages/ItemPage/ItemPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/item/:uuid" element={<ItemPage />} />
       </Routes>
       {/* <Footer /> */}
     </>

@@ -1,43 +1,11 @@
-import item1 from "../../assets/item1-min.jpg";
-import item2 from "../../assets/item2-min.jpg";
-import item3 from "../../assets/item3-min.jpg";
-import item1_2 from "../../assets/item1-2.jpg";
-import item2_2 from "../../assets/item2-2.jpg";
-
-import item3_2 from "../../assets/item3-2.jpg";
-
+import { items } from "../../components/DataItems";
 import Swiper from "../../components/Swiper";
-
+import ItemPage from "../ItemPage/ItemPage";
 import { useState } from "react";
-
-const items = [
-  {
-    id: `111111`,
-    pic1: item1,
-    pic2: item1_2,
-    title: `Платье такое-то такое-то 1`,
-    price: 15990,
-    description: `Brand new camel! Only 2 left in stock`,
-  },
-  {
-    id: `222222`,
-    pic1: item2,
-    pic2: item2_2,
-    title: `Платье такое-то такое-то 2`,
-    price: 16990,
-    description: `This camel is dying so here comes the huge discount!`,
-  },
-  {
-    id: `333333`,
-    pic1: item3,
-    pic2: item3_2,
-    title: `Платье такое-то такое-то 3`,
-    price: 17490,
-    description: `Buy 5 get 1 free!`,
-  },
-];
+import { useNavigate } from "react-router-dom";
 
 function HomepageItems() {
+  const navigate = useNavigate();
   return (
     <section>
       <h1 className="text-6xl text-center  pt-[3vh] font-semibold gradient">
@@ -48,13 +16,18 @@ function HomepageItems() {
         {items.map((item, i) => {
           return (
             <div
-              className="md:w-[30vw] md:h-full flex flex-row md:flex-col gap-4 shadow-xl "
+              className="md:w-[30vw] md:h-full flex flex-row md:flex-col md:gap-4 gap-2 shadow-xl cursor-pointer "
               key={item.id}
+              onClick={() => {
+                navigate(`item/${item.id}`);
+              }}
             >
-              <Swiper item={item} />
+              <Swiper item={item} className="md:w-full w-[70%]" />
 
-              <div className="flex flex-col gap-1 px-4">
-                <p className="font-light text-xl">{item.title}</p>
+              <div className="flex flex-col md:gap-1 md:px-4 md:w-full w-[30%]">
+                <p className="font-light md:text-xl text-sm hover:underline">
+                  {item.title}
+                </p>
                 <p className=" pb-1">
                   {item.price.toString().slice(0, 2) +
                     ` ` +

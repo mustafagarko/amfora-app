@@ -64,14 +64,20 @@ function Navbar() {
             e.preventDefault();
             setMenuOpened(!menuOpened);
           }}
-          className="font-thin text-2xl hover:font-bold"
+          className="font-thin text-2xl hover:font-bold cursor-pointer"
         >
           &larr; Close
         </h1>
-        <h1 className="font-thin text-2xl hover:font-bold">Здесь</h1>
+        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
+          Здесь
+        </h1>
 
-        <h1 className="font-thin text-2xl hover:font-bold">Тоже </h1>
-        <h1 className="font-thin text-2xl hover:font-bold">Что-то будет </h1>
+        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
+          Тоже{" "}
+        </h1>
+        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
+          Что-то будет{" "}
+        </h1>
       </div>
     </nav>
   );
