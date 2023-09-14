@@ -22,13 +22,6 @@ function Homepage() {
               designed for people туда-сюда
             </p>
           </div>
-          {/* <div
-            className={
-              menuOpened
-                ? `absolute z-40 inset-0 w-[100vw] h-[100vh]  bg-transparent blur-xl overflow-y-hidden`
-                : `hidden`
-            }
-          /> */}
         </figure>
       </div>
       <HomepageItems />

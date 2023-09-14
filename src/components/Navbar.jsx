@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import logo from "../assets/amforalogo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -35,7 +36,7 @@ function Navbar() {
       ref={navbarRef}
       className="flex z-50 justify-between p-4 fixed inset-0 h-16 bg-white blur-none "
     >
-      <div className="flex items-center justify-center">
+      <div className="md:flex items-center justify-center md:visible hidden">
         <Link to="/contact-us">
           <button className="underline w-[200px]">Связаться с нами</button>
         </Link>
@@ -54,31 +55,49 @@ function Navbar() {
         <Icon icon="material-symbols:menu" height={24} width={24} />
         <p>Меню</p>
       </button>
-      <div
-        className={`right-0 absolute w-[25vw] h-[100vh] bg-white transition-transform duration-1000 transform px-4 pt-4 flex flex-col gap-4 ${
+      <ul
+        className={`right-0 absolute md:w-[25vw] w-screen h-[100vh] bg-white transition-transform duration-1000 transform px-4 pt-4 flex flex-col gap-4 ${
           menuOpened ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
-        <h1
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpened(!menuOpened);
-          }}
-          className="font-thin text-2xl hover:font-bold cursor-pointer"
-        >
-          &larr; Close
-        </h1>
-        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
-          Здесь
-        </h1>
-
-        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
-          Тоже{" "}
-        </h1>
-        <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
-          Что-то будет{" "}
-        </h1>
-      </div>
+        <li>
+          <h1
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpened(!menuOpened);
+            }}
+            className="font-thin text-2xl hover:font-bold cursor-pointer underline underline-offset-8"
+          >
+            &larr; Закрыть
+          </h1>
+        </li>
+        <li>
+          <Link
+            to={`contact-us`}
+            onClick={() => {
+              setMenuOpened(!menuOpened);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
+              Контакты
+            </h1>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={`/`}
+            onClick={() => {
+              setMenuOpened(!menuOpened);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <h1 className="font-thin text-2xl hover:font-bold cursor-pointer">
+              На главную
+            </h1>
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }
