@@ -20,7 +20,6 @@ function Navbar() {
 
     document.addEventListener("click", handleClickOutside);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -33,7 +32,7 @@ function Navbar() {
   return (
     <nav
       ref={navbarRef}
-      className="flex z-50 justify-between p-4 fixed inset-0 h-16 bg-white blur-none"
+      className="flex z-50 justify-between p-4 fixed inset-0 h-16 bg-white blur-none "
     >
       <div className="flex items-center justify-center">
         <Link to="/contact-us">
@@ -68,14 +67,10 @@ function Navbar() {
         >
           &larr; Close
         </h1>
-        <h1 className="font-thin text-2xl hover:font-bold">Women dresses</h1>
+        <h1 className="font-thin text-2xl hover:font-bold">Здесь</h1>
 
-        <h1 className="font-thin text-2xl hover:font-bold">
-          More women dresses
-        </h1>
-        <h1 className="font-thin text-2xl hover:font-bold">
-          Even more women dresses!
-        </h1>
+        <h1 className="font-thin text-2xl hover:font-bold">Тоже </h1>
+        <h1 className="font-thin text-2xl hover:font-bold">Что-то будет </h1>
       </div>
     </nav>
   );
