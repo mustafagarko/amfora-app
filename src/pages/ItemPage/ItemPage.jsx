@@ -10,7 +10,6 @@ export default function ItemPage() {
   const [item] = items.filter((item) => item.id === uuid);
   const navigate = useNavigate();
   const otherItems = items.filter((item) => item.id !== uuid);
-  const color = item.colorCode;
   //   useEffect(() => {
   //     console.log(uuid);
   //     console.log(item);
@@ -74,7 +73,10 @@ export default function ItemPage() {
             />
           </Swiper>
         </figure>
-        <div className={`w-[1px] h-[90%] my-[2.5%] bg-[${color}]`} />
+        <div
+          className={`w-[1px] h-[90%] my-[2.5%]`}
+          style={{ backgroundColor: item.colorCode }}
+        />
         <div className="w-[50%] h-full flex flex-col justify-between">
           <div className="w-full h-full flex flex-col gap-2 py-[3vh]">
             <h1 className="text-4xl">{item.title}</h1>
@@ -90,7 +92,8 @@ export default function ItemPage() {
                 {otherItems.map((item) => {
                   return (
                     <button
-                      className={`w-8 h-8 rounded-full bg-[${item.colorCode}] `}
+                      style={{ backgroundColor: item.colorCode }}
+                      className={`w-8 h-8 rounded-full `}
                       onClick={(e) => {
                         e.preventDefault();
                         navigate(`/item/${item.id}`);
@@ -110,7 +113,8 @@ export default function ItemPage() {
           </div>
           <div className="mb-[4vh]">
             <button
-              className={`w-[10vw] h-[6vh] bg-[${item.colorCode}] text-white uppercase font-thin `}
+              style={{ backgroundColor: item.colorCode }}
+              className={`w-[10vw] h-[6vh] text-white uppercase font-thin `}
             >
               Купить
             </button>
