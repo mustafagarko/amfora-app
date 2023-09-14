@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import logo from "../assets/amforalogo.jpeg";
 
 function Navbar() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -40,8 +41,8 @@ function Navbar() {
         </Link>
       </div>
       <Link to={`/`}>
-        <div className="flex gap-2 items-center justify-center w-[200px]">
-          <Icon icon="game-icons:column-vase" height={24} width={24} />
+        <div className="flex gap-4 items-center justify-center w-[200px]">
+          <img src={logo} className="w-8 h-8 transform  -rotate-45" />{" "}
           <button className="font-sans font-bold text-lg ">AMFORA</button>
         </div>
       </Link>
