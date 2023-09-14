@@ -1,55 +1,67 @@
-import camel1 from "../../assets/camel1.jpeg";
-import camel2 from "../../assets/camel2.jpeg";
-import camel3 from "../../assets/camel3.jpeg";
+import item1 from "../../assets/item1-min.jpg";
+import item2 from "../../assets/item2-min.jpg";
+import item3 from "../../assets/item3-min.jpg";
+import item1_2 from "../../assets/item1-2.jpg";
+import item2_2 from "../../assets/item2-2.jpg";
+
+import item3_2 from "../../assets/item3-2.jpg";
+
+import Swiper from "../../components/Swiper";
 
 import { useState } from "react";
 
 const items = [
   {
     id: `111111`,
-    pic1: camel1,
-    title: `Camel Abdul`,
-    price: 150,
+    pic1: item1,
+    pic2: item1_2,
+    title: `Платье такое-то такое-то 1`,
+    price: 15000,
     description: `Brand new camel! Only 2 left in stock`,
   },
   {
     id: `222222`,
-    pic1: camel2,
-    title: `Camel Mahmoud`,
-    price: 20,
+    pic1: item2,
+    pic2: item2_2,
+    title: `Платье такое-то такое-то 2`,
+    price: 16000,
     description: `This camel is dying so here comes the huge discount!`,
   },
   {
     id: `333333`,
-    pic1: camel3,
-    title: `Six Pack`,
-    price: 600,
+    pic1: item3,
+    pic2: item3_2,
+    title: `Платье такое-то такое-то 3`,
+    price: 17000,
     description: `Buy 5 get 1 free!`,
   },
 ];
 
 function HomepageItems() {
-  const [isHovered, setIsHovered] = useState(``);
   return (
-    <div className="flex gap-16 justify-between p-8 w-full h-[100vh]">
-      {items.map((item, i) => {
-        return (
-          <div key={item.id} className="flex flex-col gap-6 ">
-            <div className="w-full h-1/2 object-cover shadow-lg flex flex-col gap-8">
-              <img
-                src={item.pic1}
-                className="w-full  h-full shadow-lg hover:scale-105 transition-transform"
-              ></img>
+    <section>
+      <h1 className="text-6xl text-center  pt-[3vh] font-semibold ">
+        Коллекция
+      </h1>
+
+      <div className="flex md:flex-row flex-col justify-between  md:w-screen w-full md:h-[80vh] h-[160vh]  px-[2vw] py-[2vh]">
+        {items.map((item, i) => {
+          return (
+            <div
+              className="md:w-[30vw] md:h-full flex flex-row md:flex-col gap-4 "
+              key={item.id}
+            >
+              <Swiper item={item} />
+
+              <div className="flex flex-col gap-1">
+                <p className="font-thin">{item.title}</p>
+                <p className="font-bold">{item.price}Р</p>
+              </div>
             </div>
-            <div className="flex flex-col gap-1">
-              <p className="font-thin">{item.title}</p>
-              <p className="font-bold">{item.price}$</p>
-              <p className="font-thin">{item.description}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

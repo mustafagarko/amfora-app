@@ -5,3 +5,45 @@
 .page {
   filter: blur(0);
 }
+
+#swiper .arrowNext,
+#swiper .arrowPrev {
+  visibility: hidden;
+}
+
+#swiper:hover .arrowNext,
+#swiper:hover .arrowPrev {
+  visibility: visible;
+}
+
+.arrowNext {
+  background-image: url("/src/assets/arrowNext.svg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 1vw;
+  width: 3vw;
+  height: 3vw;
+  z-index: 40;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.arrowPrev {
+  background-image: url("/src/assets/arrowNext.svg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 1vw;
+  width: 3vw;
+  height: 3vw;
+  z-index: 40;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transform: scaleX(-1) translateY(-50%);
+}

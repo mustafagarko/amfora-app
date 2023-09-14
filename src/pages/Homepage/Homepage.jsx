@@ -1,5 +1,5 @@
-import desert from "../../assets/desert.jpeg";
-import Footer from "../../components/Footer";
+import bgHero from "../../assets/heroBg-min.jpg";
+// import Footer from "../../components/Footer";
 import HomepageItems from "./HopepageItems";
 import { useState, useEffect } from "react";
 function Homepage() {
@@ -13,7 +13,7 @@ function Homepage() {
       <div>
         {/* <figure className={menuOpened ? `relative  blur-sm` : `relative`}> */}
         <figure className="relative">
-          <img src={desert} className="object-cover w-[100vw] h-[100vh]"></img>
+          <img src={bgHero} className="object-cover w-[100vw] h-[100vh]"></img>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-2">
             <h1 className="text-white text-5xl font-sans">
               Some random header
@@ -32,7 +32,7 @@ function Homepage() {
         </figure>
       </div>
       <HomepageItems />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
