@@ -92,6 +92,7 @@ export default function ItemPage() {
                 {otherItems.map((item) => {
                   return (
                     <button
+                      key={item.id}
                       style={{ backgroundColor: item.colorCode }}
                       className={`w-8 h-8 rounded-full `}
                       onClick={(e) => {

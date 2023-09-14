@@ -37,7 +37,7 @@ function Navbar() {
     >
       <div className="flex items-center justify-center">
         <Link to="/contact-us">
-          <button className="underline w-[200px]">Contact us</button>
+          <button className="underline w-[200px]">Связаться с нами</button>
         </Link>
       </div>
       <Link to={`/`}>
@@ -52,7 +52,7 @@ function Navbar() {
         className="flex gap-2 w-[200px] justify-center items-center"
       >
         <Icon icon="material-symbols:menu" height={24} width={24} />
-        <p>MENU</p>
+        <p>Меню</p>
       </button>
       <div
         className={`right-0 absolute w-[25vw] h-[100vh] bg-white transition-transform duration-1000 transform px-4 pt-4 flex flex-col gap-4 ${

@@ -3,8 +3,8 @@ import logo from "../assets/amforalogo.jpeg";
 
 function Footer() {
   return (
-    <div className="flex h-[25vh] absolute z-30 w-[100vw] bg-[#D2BAA5] justify-between mt-[5vh]">
-      <div className=" p-4 flex flex-col justify-between">
+    <div className="flex md:flex-row flex-col h-[25vh] absolute z-30 w-[100vw] bg-[#D2BAA5] justify-between mt-[5vh]">
+      <div className=" p-4 flex flex-col md:gap-0 gap-4 justify-between">
         <div className="flex gap-4">
           <h1 className="text-white font-thin text-2xl">Amfora LLC</h1>
           <img src={logo} className="w-8 h-8 -rotate-45" />
@@ -16,7 +16,6 @@ function Footer() {
           All rights reserved tuda syuda
         </h1>
       </div>
-      <img src={amforaLogo} className="w-36 p-4 h-full mr-8" />
     </div>
   );
 }
