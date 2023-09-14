@@ -10,6 +10,7 @@ export default function ItemPage() {
   const [item] = items.filter((item) => item.id === uuid);
   const navigate = useNavigate();
   const otherItems = items.filter((item) => item.id !== uuid);
+  const color = item.colorCode;
   //   useEffect(() => {
   //     console.log(uuid);
   //     console.log(item);
@@ -73,7 +74,7 @@ export default function ItemPage() {
             />
           </Swiper>
         </figure>
-        <div className={`w-[1px] h-[90%] my-[2.5%] bg-[${item.colorCode}]`} />
+        <div className={`w-[1px] h-[90%] my-[2.5%] bg-[${color}]`} />
         <div className="w-[50%] h-full flex flex-col justify-between">
           <div className="w-full h-full flex flex-col gap-2 py-[3vh]">
             <h1 className="text-4xl">{item.title}</h1>
