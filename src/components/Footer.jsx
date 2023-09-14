@@ -1,4 +1,3 @@
-import amforaLogo from "../assets/amforaLogo.png";
 import logo from "../assets/amforalogo.jpeg";
 
 function Footer() {
