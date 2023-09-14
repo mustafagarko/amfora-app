@@ -19,7 +19,9 @@ export default ({ item }) => {
         nextEl: ".arrowNext",
         prevEl: ".arrowPrev",
       }}
-      pagination={{ clickable: true }}
+      pagination={{
+        clickable: true,
+      }}
       loop={true}
       id="swiper"
     >

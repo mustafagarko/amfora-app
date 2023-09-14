@@ -6,6 +6,31 @@
   filter: blur(0);
 }
 
+.gradient {
+  background: #00a6b0;
+  background: linear-gradient(to right, #00a6b0 0%, #050505 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .swiper-container {
+  color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 1vw;
+  width: 3vw;
+  height: 3vw;
+  z-index: 40;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+} */
+.swiper-pagination {
+  --swiper-pagination-color: white;
+}
+
 #swiper .arrowNext,
 #swiper .arrowPrev {
   visibility: hidden;

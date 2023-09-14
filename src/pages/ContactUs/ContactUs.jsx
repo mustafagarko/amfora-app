@@ -1,12 +1,16 @@
 import { Icon } from "@iconify/react";
 import mailbox from "../../assets/mailbox.jpeg";
 import logo from "../../assets/amforalogo.jpeg";
+import bgPic from "../../assets/item1-min.jpg";
 
 function ContactUs() {
   return (
     <section className="page mt-10 h-[100vh] " id="page">
       <figure className=" w-full h-full relative">
-        <img src={mailbox} className="fixed h-full z-10 w-full"></img>
+        <img
+          src={bgPic}
+          className="fixed object-cover h-full z-10 w-full"
+        ></img>
         <h1 className="text-6xl z-20 left-1/2 transform -translate-x-1/2 top-[30vh] text-white uppercase absolute">
           Связаться с нами
         </h1>
