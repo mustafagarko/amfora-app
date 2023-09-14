@@ -74,34 +74,45 @@ export default function ItemPage() {
           </Swiper>
         </figure>
         <div className={`w-[1px] h-[90%] my-[2.5%] bg-[${item.colorCode}]`} />
-        <div className="w-[50%] h-full flex flex-col py-[3vh]">
-          <h1 className="text-4xl">{item.title}</h1>
-          <p>
-            {item.price.toString().slice(0, 2) +
-              ` ` +
-              `${item.price.toString().slice(2)} `}
-            ₽
-          </p>
-          <div className="flex flex-col gap-2">
-            <p>Цвета</p>
-            <div className="flex gap-2">
-              {otherItems.map((item) => {
-                return (
-                  <button
-                    className={`w-8 h-8 rounded-full bg-[${item.colorCode}] `}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      navigate(`/item/${item.id}`);
-                    }}
-                  >
-                    <Icon
-                      icon="ph:circle-thin"
-                      className="w-8 h-8 text-white"
-                    />
-                  </button>
-                );
-              })}
+        <div className="w-[50%] h-full flex flex-col justify-between">
+          <div className="w-full h-full flex flex-col gap-2 py-[3vh]">
+            <h1 className="text-4xl">{item.title}</h1>
+            <p className="text-xl underline underline-offset-2">
+              {item.price.toString().slice(0, 2) +
+                ` ` +
+                `${item.price.toString().slice(2)} `}
+              ₽
+            </p>
+            <div className="flex flex-col gap-2">
+              <p>Цвета:</p>
+              <div className="flex gap-2">
+                {otherItems.map((item) => {
+                  return (
+                    <button
+                      className={`w-8 h-8 rounded-full bg-[${item.colorCode}] `}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate(`/item/${item.id}`);
+                      }}
+                    >
+                      <Icon
+                        icon="ph:circle-thin"
+                        className="w-8 h-8 text-white"
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
+            <p>{item.description}</p>
+            <p>Материал: {item.material}</p>
+          </div>
+          <div className="mb-[4vh]">
+            <button
+              className={`w-[10vw] h-[6vh] bg-[${item.colorCode}] text-white uppercase font-thin `}
+            >
+              Купить
+            </button>
           </div>
         </div>
       </div>

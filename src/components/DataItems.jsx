@@ -11,7 +11,7 @@ export const items = [
     pic1: item1,
     pic2: item1_2,
     title: `Абая`,
-    material: `шелк`,
+    material: `шёлк`,
     color: "green",
     colorCode: `#028189`,
 
@@ -23,7 +23,7 @@ export const items = [
     pic1: item2,
     pic2: item2_2,
     title: `Абая`,
-    material: `шелк`,
+    material: `шёлк`,
     color: "red",
     colorCode: `#A21C2D`,
 
@@ -35,7 +35,7 @@ export const items = [
     pic1: item3,
     pic2: item3_2,
     title: `Абая`,
-    material: `шелк`,
+    material: `шёлк`,
     color: "black",
     colorCode: `#0E0E0E`,
 
