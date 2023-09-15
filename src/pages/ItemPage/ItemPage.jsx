@@ -115,7 +115,7 @@ export default function ItemPage() {
           <div className="mb-[4vh]">
             <button
               style={{ backgroundColor: item.colorCode }}
-              className={`w-[60px] h-[20px] text-white uppercase font-thin `}
+              className={`w-[140px] h-[50px]  text-white uppercase font-light `}
             >
               Купить
             </button>
