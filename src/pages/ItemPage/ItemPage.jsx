@@ -11,6 +11,10 @@ export default function ItemPage() {
   const navigate = useNavigate();
   const otherItems = items.filter((item) => item.id !== uuid);
 
+  function handleClick(e) {
+    e.preventDefault();
+  }
+
   return (
     <section className="w-screen md:h-screen h-[120vh]" id="page">
       <button
@@ -19,7 +23,7 @@ export default function ItemPage() {
           e.stopPropagation();
           navigate(`/`);
         }}
-        className="absolute top-[10%] left-[3%] rounded-full border-[1px] p-2 z-40 border-black md:bg-transparent bg-white"
+        className="absolute top-[10%] left-[3%] rounded-full border-[1px] p-3 z-40 border-black md:bg-transparent bg-white"
       >
         <Icon icon="fluent-mdl2:back" width={25} height={25} />
       </button>
@@ -115,7 +119,8 @@ export default function ItemPage() {
           <div className="mb-[4vh]">
             <button
               style={{ backgroundColor: item.colorCode }}
-              className={`w-[140px] h-[50px]  text-white uppercase font-light `}
+              className={`w-[140px] h-[50px]  text-white uppercase font-light active:scale-95`}
+              onClick={(e) => handleClick(e)}
             >
               Купить
             </button>

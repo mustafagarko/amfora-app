@@ -19,7 +19,7 @@ function Homepage() {
               Amfora Wear
             </h1>
             <p className="text-white font-thin bg-[#262126] px-2 w-fit">
-              designed for people туда-сюда
+              designed for people
             </p>
           </div>
         </figure>

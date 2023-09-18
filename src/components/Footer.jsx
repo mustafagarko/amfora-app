@@ -11,9 +11,7 @@ function Footer() {
         <h1 className="text-white font-thin text-xl">
           Phone: +1 (234) 567 890
         </h1>
-        <h1 className="text-white font-thin text-xl">
-          All rights reserved tuda syuda
-        </h1>
+        <h1 className="text-white font-thin text-xl">All rights reserved</h1>
       </div>
     </div>
   );
