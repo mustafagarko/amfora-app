@@ -18,12 +18,14 @@ export default function ItemPage() {
   }
 
   return (
-    <section className="w-screen md:h-screen h-[130vh]" id="page">
+    <section className="w-screen md:h-screen h-fit flex flex-col" id="page">
       <section
         onClick={(e) => {
           if (showModal && e.target.id !== `modal`) setShowModal(false);
         }}
-        className={`w-full h-full ${showModal ? `blur-lg` : ``}`}
+        className={`w-full h-fit items-center flex justify-center ${
+          showModal ? `blur-lg` : ``
+        }`}
       >
         <button
           onClick={(e) => {
@@ -35,8 +37,8 @@ export default function ItemPage() {
         >
           <Icon icon="fluent-mdl2:back" width={25} height={25} />
         </button>
-        <div className="md:w-[80vw] md:mt-0 mt-8 w-[90%] md:h-[80vh] h-fit shadow-2xl absolute md:top-[53%] top-[50%] left-1/2 -translate-x-1/2 md:-translate-y-1/2 -translate-y-[35%] flex md:flex-row flex-col justify-between">
-          <figure className="h-[80vh] md:w-[40%] w-full">
+        <div className="md:w-[80vw]  my-20 w-[90%] md:h-[80vh] h-fit shadow-2xl  flex md:flex-row flex-col justify-between gap-5 p-4">
+          <figure className="h-full md:w-[40%] w-full">
             <Swiper
               className="w-full h-full"
               spaceBetween={0}
@@ -83,11 +85,11 @@ export default function ItemPage() {
             </Swiper>
           </figure>
           <div
-            className={`md:w-[1px] w-full md:h-[90%] h-[1px] md:my-[2.5%]`}
+            className={`md:w-[1px] w-[90%] md:mx-0 translate-x-[5%] md:h-[90%] h-[1px] md:my-[2.5%]`}
             style={{ backgroundColor: item.colorCode }}
           />
-          <div className="pl-4 md:w-[50%] w-full h-full flex flex-col justify-between">
-            <div className="w-full h-full flex flex-col gap-2 py-[3vh]">
+          <div className="pl-4 md:w-[50%] w-full h-[50vh] flex flex-col justify-between">
+            <div className="w-full h-full flex flex-col gap-2">
               <div className="flex md:flex-col md:gap-0 gap-4 flex-row items-center md:items-start">
                 <h1 className="text-4xl">{item.title}</h1>
                 <p className="text-xl underline underline-offset-2">
@@ -123,15 +125,15 @@ export default function ItemPage() {
               </div>
               <p>{item.description}</p>
               <p>Материал: {item.material}</p>
-              <div className="mb-[4vh]">
-                <button
-                  style={{ backgroundColor: item.colorCode }}
-                  className={`w-[140px] h-[50px]  text-white uppercase font-light active:scale-95`}
-                  onClick={(e) => handleClick(e)}
-                >
-                  Купить
-                </button>
-              </div>
+            </div>
+            <div className="mb-[4vh]">
+              <button
+                style={{ backgroundColor: item.colorCode }}
+                className={`w-[140px] h-[50px]  text-white uppercase font-light active:scale-95`}
+                onClick={(e) => handleClick(e)}
+              >
+                Купить
+              </button>
             </div>
           </div>
         </div>
