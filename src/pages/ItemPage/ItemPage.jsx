@@ -140,10 +140,34 @@ export default function ItemPage() {
         id="modal"
         className={
           showModal
-            ? `w-[50vw] h-[50vh] bg-white absolute top-[50vh] left-[50vw]  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC]`
+            ? `w-[50vw] h-[50vh] bg-white fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC] flex flex-col gap-20 p-10`
             : `hidden`
         }
-      ></div>
+      >
+        <p className="text-center text-3xl gradient">Выберите способ связи</p>
+        <div className="flex md:flex-row flex-col justify-between">
+          <div className="flex flex-col gap-4 items-center justify-center">
+            <p className="gradient">Instagram</p>
+            <Icon icon={"skill-icons:instagram"} width={45} height={45} />
+          </div>
+          <a
+            href={`https://wa.me/+79373773423?text=Здравствуйте!+Заинтересовал+данный+товар+-++https://amfora-app.vercel.app/item/${item.id}`}
+            className="flex flex-col gap-4 items-center justify-center"
+          >
+            <p className="gradient">WhatsApp</p>
+            <Icon icon={"logos:whatsapp-icon"} width={45} height={45} />
+          </a>
+          <div className="flex flex-col gap-4 items-center justify-center">
+            <p className="gradient">Позвонить</p>
+            <Icon
+              icon={"ic:baseline-phone"}
+              className="text-green-500"
+              width={45}
+              height={45}
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
