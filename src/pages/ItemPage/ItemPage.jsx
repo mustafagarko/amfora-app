@@ -35,7 +35,7 @@ export default function ItemPage() {
         >
           <Icon icon="fluent-mdl2:back" width={25} height={25} />
         </button>
-        <div className="md:w-[80vw] w-[90%] md:h-[80vh] h-[120vh] shadow-2xl absolute top-[53%] left-1/2 -translate-x-1/2 md:-translate-y-1/2 -translate-y-[35%] flex md:flex-row flex-col justify-between">
+        <div className="md:w-[80vw] w-[90%] md:h-[80vh] h-[130vh] shadow-2xl absolute top-[53%] left-1/2 -translate-x-1/2 md:-translate-y-1/2 -translate-y-[35%] flex md:flex-row flex-col justify-between">
           <figure className="h-[80vh] md:w-[40%] w-full">
             <Swiper
               className="w-full h-full"
