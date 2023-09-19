@@ -1,6 +1,6 @@
 import bgHero from "../../assets/heroBg-min.jpg";
 // import Footer from "../../components/Footer";
-import HomepageItems from "./HopepageItems";
+import HomepageItems from "./HomepageItems";
 import { useState, useEffect } from "react";
 function Homepage() {
   // const [menuOpened, setMenuOpened] = useState(false);

@@ -21,19 +21,19 @@ export default ({ item }) => {
       loop={true}
       id="swiper"
     >
-      <SwiperSlide>
-        <figure>
+      <SwiperSlide className="w-full h-full">
+        <figure className="w-full h-full">
           <img
             src={item.pic1}
-            className="object-cover hover:scale-105 transition-transform"
+            className="object-cover w-full h-full hover:scale-105 transition-transform"
           ></img>
         </figure>
       </SwiperSlide>
-      <SwiperSlide>
-        <figure>
+      <SwiperSlide className="w-full h-full">
+        <figure className="w-full h-full">
           <img
             src={item.pic2}
-            className="object-cover  hover:scale-105 transition-transform"
+            className="object-cover w-full h-full  hover:scale-105 transition-transform"
           ></img>
         </figure>
       </SwiperSlide>
