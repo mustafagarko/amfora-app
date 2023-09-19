@@ -18,7 +18,7 @@ export default function ItemPage() {
   }
 
   return (
-    <section className="`w-screen md:h-screen h-[120vh] " id="page">
+    <section className="`w-screen md:h-screen h-[140vh] " id="page">
       <section
         onClick={(e) => {
           if (showModal && e.target.id !== `modal`) setShowModal(false);
@@ -86,7 +86,7 @@ export default function ItemPage() {
             className={`md:w-[1px] w-full md:h-[90%] h-[1px] md:my-[2.5%]`}
             style={{ backgroundColor: item.colorCode }}
           />
-          <div className="md:w-[50%] w-full h-full flex flex-col justify-between">
+          <div className="pl-4 md:w-[50%] w-full h-full flex flex-col justify-between">
             <div className="w-full h-full flex flex-col gap-2 py-[3vh]">
               <div className="flex md:flex-col md:gap-0 gap-4 flex-row items-center md:items-start">
                 <h1 className="text-4xl">{item.title}</h1>
@@ -140,12 +140,12 @@ export default function ItemPage() {
         id="modal"
         className={
           showModal
-            ? `md:w-[50vw] md:h-[50vh] w-[80vw] h-[60vh] bg-white fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC] flex flex-col gap-20 p-10`
+            ? `md:w-[50vw] md:h-[50vh] w-[80vw] h-[60vh] bg-white fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC] flex flex-col justify-between gap-10 md:p-10 p-5`
             : `hidden`
         }
       >
         <p className="text-center text-3xl gradient">Выберите способ связи</p>
-        <div className="flex md:flex-row flex-col h-full justify-between">
+        <div className="flex md:flex-row flex-col  h-full justify-between">
           <a
             href={`https://ig.me/m/amfora.wear`}
             className="flex flex-row-reverse md:flex-col gap-4 items-center justify-center"
@@ -181,7 +181,7 @@ export default function ItemPage() {
         >
           <Icon
             icon="material-symbols:close"
-            className="absolute top-5 right-5 w-8 h-8"
+            className="absolute md:top-5 md:right-5 -top-2 -right-2 md:bg-transparent bg-white md:rounded-none rounded-full md:border-0 border-[1px] border-black w-8 h-8"
           />
         </button>
       </div>
