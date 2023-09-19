@@ -4,12 +4,9 @@ import bgPic from "../../assets/item1-min.jpg";
 
 function ContactUs() {
   return (
-    <section className="mt-10 h-[100vh] " id="page">
-      <figure className="page w-full h-full relative">
-        <img
-          src={bgPic}
-          className="fixed object-cover h-full z-10 w-full"
-        ></img>
+    <section className="page mt-10 h-[100vh] " id="page">
+      <figure className="w-full h-full">
+        <img src={bgPic} className="object-cover h-full z-10 w-full"></img>
         <h1 className="text-6xl z-20 left-1/2 transform -translate-x-1/2 top-[25vh] text-white uppercase absolute text-center">
           Связаться с нами
         </h1>
