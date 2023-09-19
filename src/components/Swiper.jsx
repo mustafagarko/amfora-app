@@ -25,7 +25,7 @@ export default ({ item }) => {
         <figure className="w-full h-full">
           <img
             src={item.pic1}
-            className="object-cover w-full h-full hover:scale-105 transition-transform"
+            className="object-cover w-full h-full md:hover:scale-105 transition-transform"
           ></img>
         </figure>
       </SwiperSlide>
@@ -33,7 +33,7 @@ export default ({ item }) => {
         <figure className="w-full h-full">
           <img
             src={item.pic2}
-            className="object-cover w-full h-full  hover:scale-105 transition-transform"
+            className="object-cover w-full h-full  md:hover:scale-105 transition-transform"
           ></img>
         </figure>
       </SwiperSlide>

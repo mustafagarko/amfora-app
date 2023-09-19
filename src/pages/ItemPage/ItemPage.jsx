@@ -56,7 +56,7 @@ export default function ItemPage() {
                 <figure className="w-full h-full">
                   <img
                     src={item.pic1}
-                    className="object-cover hover:scale-105 transition-transform w-full h-full"
+                    className="object-cover md:hover:scale-105 transition-transform w-full h-full"
                   ></img>
                 </figure>
               </SwiperSlide>
@@ -64,7 +64,7 @@ export default function ItemPage() {
                 <figure className="w-full h-full">
                   <img
                     src={item.pic2}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform"
+                    className="object-cover w-full h-full md:hover:scale-105 transition-transform"
                   ></img>
                 </figure>
               </SwiperSlide>
@@ -123,15 +123,15 @@ export default function ItemPage() {
               </div>
               <p>{item.description}</p>
               <p>Материал: {item.material}</p>
-            </div>
-            <div className="mb-[4vh]">
-              <button
-                style={{ backgroundColor: item.colorCode }}
-                className={`w-[140px] h-[50px]  text-white uppercase font-light active:scale-95`}
-                onClick={(e) => handleClick(e)}
-              >
-                Купить
-              </button>
+              <div className="mb-[4vh]">
+                <button
+                  style={{ backgroundColor: item.colorCode }}
+                  className={`w-[140px] h-[50px]  text-white uppercase font-light active:scale-95`}
+                  onClick={(e) => handleClick(e)}
+                >
+                  Купить
+                </button>
+              </div>
             </div>
           </div>
         </div>
