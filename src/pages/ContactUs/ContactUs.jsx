@@ -7,7 +7,7 @@ function ContactUs() {
     <section className="page mt-10 h-[100vh] " id="page">
       <figure className="w-full h-full">
         <img src={bgPic} className="object-cover h-full z-10 w-full"></img>
-        <h1 className="text-6xl z-20 left-1/2 transform -translate-x-1/2 top-[25vh] text-white uppercase absolute text-center">
+        <h1 className="md:text-6xl text-5xl z-20 left-1/2 transform -translate-x-1/2 top-[25vh] text-white uppercase absolute text-center">
           Связаться с нами
         </h1>
         <div className="flex gap-2 flex-col bg-white z-20 absolute w-full h-[50vh] bottom-0">
