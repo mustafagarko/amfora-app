@@ -4,7 +4,7 @@ import bgPic from "../../assets/item1-min.jpg";
 
 function ContactUs() {
   return (
-    <section className="page mt-10 h-[100vh] " id="page">
+    <section className="relative page mt-10 h-[100vh] " id="page">
       <figure className="w-full h-full">
         <img src={bgPic} className="object-cover h-full z-10 w-full"></img>
         <h1 className="md:text-6xl text-5xl z-20 left-1/2 transform -translate-x-1/2 top-[25vh] text-white uppercase absolute text-center">
