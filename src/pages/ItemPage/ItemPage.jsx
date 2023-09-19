@@ -156,14 +156,14 @@ export default function ItemPage() {
             <Icon icon={"skill-icons:instagram"} width={45} height={45} />
           </a>
           <a
-            href={`https://wa.me/+79373773423?text=Здравствуйте!+Заинтересовал+данный+товар+-+https://amfora-app.vercel.app/item/${item.id}`}
+            href={`https://wa.me/+79962751073?text=Здравствуйте!+Заинтересовал+данный+товар+-+https://amfora-app.vercel.app/item/${item.id}`}
             className="flex  flex-row-reverse md:flex-col gap-4 items-center justify-center"
           >
             <p className="gradient">WhatsApp</p>
             <Icon icon={"logos:whatsapp-icon"} width={45} height={45} />
           </a>
           <a
-            href="tel:+79176773047"
+            href="tel:+79962751073"
             className="flex flex-row-reverse md:flex-col gap-4 items-center justify-center"
           >
             <p className="gradient">Позвонить</p>
