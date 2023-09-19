@@ -140,24 +140,30 @@ export default function ItemPage() {
         id="modal"
         className={
           showModal
-            ? `w-[50vw] h-[50vh] bg-white fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC] flex flex-col gap-20 p-10`
+            ? `md:w-[50vw] md:h-[50vh] w-[80vw] h-[60vh] bg-white fixed top-1/2 left-1/2  -translate-y-1/2 -translate-x-1/2 z-40 shadow-lg border-2 border-[#F3E4DC] flex flex-col gap-20 p-10`
             : `hidden`
         }
       >
         <p className="text-center text-3xl gradient">Выберите способ связи</p>
-        <div className="flex md:flex-row flex-col justify-between">
-          <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="flex md:flex-row flex-col h-full justify-between">
+          <a
+            href={`https://ig.me/m/amfora.wear`}
+            className="flex flex-row-reverse md:flex-col gap-4 items-center justify-center"
+          >
             <p className="gradient">Instagram</p>
             <Icon icon={"skill-icons:instagram"} width={45} height={45} />
-          </div>
+          </a>
           <a
-            href={`https://wa.me/+79373773423?text=Здравствуйте!+Заинтересовал+данный+товар+-++https://amfora-app.vercel.app/item/${item.id}`}
-            className="flex flex-col gap-4 items-center justify-center"
+            href={`https://wa.me/+79373773423?text=Здравствуйте!+Заинтересовал+данный+товар+-+https://amfora-app.vercel.app/item/${item.id}`}
+            className="flex  flex-row-reverse md:flex-col gap-4 items-center justify-center"
           >
             <p className="gradient">WhatsApp</p>
             <Icon icon={"logos:whatsapp-icon"} width={45} height={45} />
           </a>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <a
+            href="tel:+79176773047"
+            className="flex flex-row-reverse md:flex-col gap-4 items-center justify-center"
+          >
             <p className="gradient">Позвонить</p>
             <Icon
               icon={"ic:baseline-phone"}
@@ -165,8 +171,19 @@ export default function ItemPage() {
               width={45}
               height={45}
             />
-          </div>
+          </a>
         </div>
+        <button
+          className="w-fit h-fit"
+          onClick={(e) => {
+            setShowModal(!showModal);
+          }}
+        >
+          <Icon
+            icon="material-symbols:close"
+            className="absolute top-5 right-5 w-8 h-8"
+          />
+        </button>
       </div>
     </section>
   );
