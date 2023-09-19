@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <nav
       ref={navbarRef}
-      className="flex z-50 justify-between p-4 fixed inset-0 h-16 bg-white blur-none "
+      className="flex z-50 justify-between p-4 fixed inset-0 h-16 bg-white blur-none"
     >
       <div className="md:flex items-center justify-center md:visible hidden">
         <Link to="/contact-us">
