@@ -1,5 +1,5 @@
 import { items } from "../../components/DataItems";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -11,6 +11,9 @@ export default function ItemPage() {
   const navigate = useNavigate();
   const otherItems = items.filter((item) => item.id !== uuid);
   const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function handleClick(e) {
     e.preventDefault();

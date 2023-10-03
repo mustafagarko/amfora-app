@@ -1,8 +1,12 @@
 import { Icon } from "@iconify/react";
 import logo from "../../assets/amforalogo.jpeg";
 import bgPic from "../../assets/item1-min.jpg";
+import { useEffect } from "react";
 
 function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="relative page mt-10 h-[100vh] " id="page">
       <figure className="w-full h-full">

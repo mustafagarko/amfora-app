@@ -1,12 +1,15 @@
 import { items } from "../../components/DataItems";
 import Swiper from "../../components/Swiper";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function HomepageItems() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   return (
-    <section>
+    <section className="mb-[100px]">
       <h1 className="text-6xl text-center  pt-[3vh] font-semibold gradient">
         Новая коллекция
       </h1>
